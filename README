@@ -1,0 +1,37 @@
+occipital-tunnels Demo Website
+--------------------------------------------------------------
+
+WHAT IS THIS?
+--------------------------------------------------------------
+occiputal-tunnels is a simple Demo Application built primarily with HTML, CSS, Javascript, PHP, and MySQL.
+Though I had intended to use an alternative to PHP, unfortunately, the free web hosting service I used, 000webhost, only allowed the use of PHP as their server side language for free users.
+In addition, the Javascript library, jQuery, was used to simplify AJAX implementation and readability.
+
+URL
+--------------------------------------------------------------
+occipital-tunnels can be viewed from the url: https://occipital-tunnels.000webhostapp.com/
+
+QUESTIONS
+--------------------------------------------------------------
+1. Why did you use the design/framework (if any) you chose?
+- jQuery was used for easy AJAX implementation.
+
+2. Are there better frameworks for this task which you did not choose for some reason?
+- Unless I'm mistaken, I believe Node.js could have been used as the server side language instead of PHP. I was stuck using PHP however because the web host I chose, 000webhost, only allows the usable of PHP on a free account.
+
+3. When you added testing, why did you select those particular tests?
+- Unfortunately, due to time constraints and lack of experience with, test cases were not added. Error messages were used however during implementation to assist in error handling. These have however, been removed.
+
+4. How can the API calls be made secure so that not anyone with the API can call them?
+- My understanding is that the use of a authentication system, such as tokens, can be used to make an API call more sucure. Other things such as remembering IP addresses and HTTP headers can be used to enhance the effect of the chosen authentification system.
+
+5. Explain how bad input should be handled on the back end if it gets past the front end checks?
+- Certain things such as only allowing certain types of data in certain SQL columns can help prevent garbage data. Other things such as throwing an exception when you receive bad data can also be a possibility.
+
+6. Which Javascript best practices do you find valuable and adhere to?
+- Unfortunately, I wouldn't say I have enough experience with Javascript to really determine what could be considered as good practice. 
+
+IMPROVEMENTS
+--------------------------------------------------------------
+Things that can be improved upon include design, prevention of SQL injections, code readability such as the use of a common variable name scheme (eg. addUser vs add-user), 
+and performance enhancements such as server optimization, the reduction of AJAX calls, the reduction of the amount of transmitted data, and using cache for recurring data.

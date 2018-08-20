@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo Responsive Webpage</title>
+<link rel="stylesheet" href="css/webpage.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/addajax.js"></script>
+<script type="text/javascript" src="js/deleteajax.js"></script>
+<script type="text/javascript" src="js/displayajax.js"></script>
+<script type="text/javascript" src="js/averageajax.js"></script>
+<script type="text/javascript" src="js/ratioajax.js"></script>
+</head>
+
+<body>
+
+<div id="myNavAdd" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+		<div id="ajaxadd-messages" class="messages"></div>
+		<form id="ajaxadd" action="php/addrecord.php" method="post">
+			<br>
+			<input type="text" id="Name" name="Name" maxlength="100" placeholder="Full Name (eg. Bill Smith)" onfocus="this.placeholder=''" onblur="this.placeholder='Full Name (eg. Bill Smith)'" required>
+			<br>
+			<br>
+			<input type="tel" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" placeholder="Phone Number (eg. 000-000-0000)" onfocus="this.placeholder=''" onblur="this.placeholder='Phone Number (eg. 000-000-0000)'" required>
+			<br>
+			<br>
+			<input type="submit" value="Add Record">
+		</form>
+	</div>
+</div>
+
+<div id="myNavDelete" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+		<div id="ajaxdelete-messages" class="messages"></div>
+		<form id="ajaxdelete" action="php/deleterecord.php" method="post">
+			<br>
+			<input type="text" id="UserID" name="UserID" pattern="[0-9]{10}" maxlength="10" placeholder="UserID (eg. 0000000000)" onfocus="this.placeholder=''" onblur="this.placeholder='UserID (eg. 0000000000)'" required>
+			<br>
+			<br>
+			<input type="submit" value="Delete Record">
+		</form>
+	</div>
+</div>
+
+<div id="myNavDisplay" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+		<div id="ajaxdisplay-messages" class="messages"></div>
+		<form id="ajaxdisplay" action="php/displayrecord.php" method="get">
+			<input type="submit" value="Display All Records">
+		</form>
+	</div>
+</div>
+
+<div class="menu">
+	<button class="menu-items" onclick="openNavAdd()">Add Record</button>
+	<button class="menu-items" onclick="openNavDelete()">Delete Record</button>
+	<button class="menu-items" onclick="openNavDisplay()">Display Record</button>
+</div>
+
+<h2>Statistics</h2>
+<table border="1">
+<tr>
+<th>Average records added per hour</th>
+<th>Ratio of records added per hour vs deleted per hour</th>
+</tr>
+<tr>
+<th id="avg-value">N/A</th>
+<th id="ratio-value">N/A</th>
+</tr>
+</table>
+
+</body>
