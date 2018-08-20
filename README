@@ -17,7 +17,7 @@ QUESTIONS
 - jQuery was used for easy AJAX implementation.
 
 2. Are there better frameworks for this task which you did not choose for some reason?
-- Unless I'm mistaken, I believe Node.js could have been used as the server side language instead of PHP. I was stuck using PHP however because the web host I chose, 000webhost, only allows the usable of PHP on a free account.
+- Unless I'm mistaken, I believe Node.js could have been used as the server side language instead of PHP. I was stuck using PHP however because the web host I chose, 000webhost, only allows the use of PHP on a free account.
 
 3. When you added testing, why did you select those particular tests?
 - Unfortunately, due to time constraints and lack of experience with, test cases were not added. Error messages were used however during implementation to assist in error handling. These have however, been removed.
